@@ -1,0 +1,2 @@
+# godemo
+study go
