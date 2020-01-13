@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 	"sync"
 )
 
@@ -18,6 +19,7 @@ type Fetcher interface {
 
 // Crawl 使用 fetcher 从某个 URL 开始递归的爬取页面，直到达到最大深度。
 func Crawl(url string, depth int, fetcher Fetcher) {
+	runtime.GOMAXPROCS()
 	defer w.Done()
 	if (!checkUrl(url)) {
 		//fmt.Println("url", url)
