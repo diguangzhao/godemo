@@ -37,4 +37,5 @@ func main() {
 	slice := []int{1, 3, 3, 4, 5, 8, 9, 10, 11, 12, 18, 20, 20, 20, 21}
 	sum := 21
 	SumOfArray(slice, sum)
+	SortInt()
 }
